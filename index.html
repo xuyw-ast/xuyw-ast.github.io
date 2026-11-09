@@ -2,1003 +2,1276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Yiwei Xu | Astrophysics</title>
-  <meta name="description" content="Yiwei Xu, Ph.D. student in Astrophysics at the National Astronomical Observatories, Chinese Academy of Sciences. Research on H I, galaxy evolution, and radio surveys.">
-
-  <style>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    
-    :root {
-      --bg: #ffffff;
-      --surface: #f7f8fa;
-      --text: #202b3a;
-      --muted: #657184;
-      --light: #8994a4;
-      --accent: #315f91;
-      --border: #e7eaf0;
-      --max-width: 1000px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont,
-        "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-      font-size: 15px;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .container {
-      width: min(var(--max-width), calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    /* Navigation */
-
-    .nav-wrap {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-      min-height: 66px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0.025em;
-      color: var(--text);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      font-size: 13px;
-      color: var(--muted);
-      transition: color .2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    /* Hero */
-
-    .hero {
-      padding: 92px 0 76px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr 190px;
-      align-items: center;
-      gap: 65px;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      margin-bottom: 19px;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(36px, 5vw, 46px);
-      line-height: 1.15;
-      letter-spacing: -0.045em;
-      font-weight: 650;
-      color: #17283c;
-    }
-
-    .hero-position {
-      margin-top: 13px;
-      font-size: 16px;
-      color: var(--muted);
-      font-weight: 450;
-    }
-
-    .hero-position strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .hero-description {
-      margin-top: 22px;
-      max-width: 660px;
-      font-size: 15px;
-      line-height: 1.85;
-      color: #586678;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 22px;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 5px 12px;
-      border: 1px solid #dce5ef;
-      border-radius: 5px;
-      color: #456789;
-      background: #f8fafc;
-      font-size: 12px;
-      font-weight: 500;
-    }
-
-    .hero-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
-    .hero-links a {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--accent);
-      transition: opacity .2s ease;
-    }
-
-    .hero-links a:hover {
-      opacity: .65;
-    }
-
-    .portrait-wrap {
-      width: 180px;
-      height: 205px;
-      justify-self: end;
-      overflow: hidden;
-      border-radius: 12px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-    }
-
-    .portrait {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 38%;
-    }
-
-    /* Main sections */
-
-    main {
-      padding-top: 10px;
-    }
-
-    .section {
-      padding: 55px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-heading {
-      display: flex;
-      align-items: baseline;
-      gap: 15px;
-      margin-bottom: 27px;
-    }
-
-    .section-number {
-      font-size: 11px;
-      color: var(--light);
-      font-weight: 600;
-      letter-spacing: .08em;
-    }
-
-    .section-heading h2 {
-      margin: 0;
-      font-size: 23px;
-      font-weight: 650;
-      letter-spacing: -.035em;
-      color: var(--text);
-    }
-
-    .section-intro {
-      color: var(--muted);
-      max-width: 760px;
-      margin: -10px 0 26px;
-      font-size: 14px;
-    }
-
-    /* About */
-
-    .about-text {
-      max-width: 850px;
-      color: #526174;
-      font-size: 15px;
-      line-height: 1.95;
-    }
-
-    .about-text p {
-      margin: 0 0 17px;
-    }
-
-    .about-text strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    /* Research */
-
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .research-card {
-      padding: 24px 25px;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      transition: border-color .2s ease,
-                  transform .2s ease;
-    }
-
-    .research-card:hover {
-      border-color: #b8c9dc;
-      transform: translateY(-2px);
-    }
-
-    .card-label {
-      font-size: 10px;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .research-card h3 {
-      margin: 0 0 11px;
-      font-size: 18px;
-      font-weight: 650;
-      letter-spacing: -.025em;
-    }
-
-    .research-card p {
-      margin: 0;
-      font-size: 13px;
-      line-height: 1.85;
-      color: var(--muted);
-    }
-
-    /* Publications */
-
-    .publication-list {
-      display: grid;
-    }
-
-    .publication {
-      padding: 22px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .publication:first-child {
-      padding-top: 0;
-    }
-
-    .publication:last-child {
-      border-bottom: none;
-    }
-
-    .publication h3 {
-      margin: 0 0 8px;
-      font-size: 15px;
-      line-height: 1.6;
-      font-weight: 650;
-      color: var(--text);
-    }
-
-    .publication p {
-      margin: 0;
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    .status {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 3px 9px;
-      border-radius: 4px;
-      font-size: 11px;
-      font-weight: 600;
-      background: #eef3f8;
-      color: #42668a;
-    }
-
-    .status.published {
-      background: #edf5ef;
-      color: #477454;
-    }
-
-    /* Experience and education */
-
-    .timeline {
-      display: grid;
-      gap: 25px;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 25px;
-    }
-
-    .timeline-date {
-      font-size: 12px;
-      color: var(--light);
-      font-weight: 600;
-      padding-top: 3px;
-    }
-
-    .timeline-content h3 {
-      margin: 0 0 4px;
-      font-size: 15px;
-      font-weight: 650;
-    }
-
-    .timeline-content .institution {
-      font-size: 13px;
-      color: var(--accent);
-      margin-bottom: 7px;
-    }
-
-    .timeline-content p {
-      margin: 0;
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.85;
-    }
-
-    /* Contact */
-
-    .contact-content {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .contact-content p {
-      max-width: 620px;
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .contact-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      padding: 10px 20px;
-      border: 1px solid var(--accent);
-      border-radius: 5px;
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 600;
-      transition: all .2s ease;
-    }
-
-    .contact-button:hover {
-      background: var(--accent);
-      color: white;
-    }
-
-    /* Footer */
-
-    footer {
-      padding: 28px 0;
-      color: var(--light);
-      font-size: 11px;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-    }
-
-    /* Responsive */
-
-    @media (max-width: 700px) {
-      .container {
-        width: min(100% - 36px, var(--max-width));
-      }
-
-      .nav {
-        min-height: 62px;
-        flex-wrap: wrap;
-        padding: 12px 0;
-      }
-
-      .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-      }
-
-      .nav-links a {
-        font-size: 12px;
-      }
-
-      .hero {
-        padding: 55px 0 48px;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .portrait-wrap {
-        grid-row: 1;
-        justify-self: start;
-        width: 125px;
-        height: 145px;
-      }
-
-      .hero-description {
-        font-size: 14px;
-      }
-
-      .section {
-        padding: 42px 0;
-      }
-
-      .research-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-
-      .contact-content {
-        flex-direction: column;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        gap: 5px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *, *::before, *::after {
-        transition-duration: 0.01ms !important;
-      }
-    }
-
-    
-/* =================================
-   Typography refinement
-   Stronger, clearer academic style
-   ================================= */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yiwei Xu | Astrophysics</title>
+
+<meta name="description" content="Yiwei Xu, Ph.D. student in Astrophysics at the National Astronomical Observatories, Chinese Academy of Sciences. Research on neutral hydrogen, galaxy evolution, and radio astronomy.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* ========================================
+   1. GLOBAL
+======================================== */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f7f9fc;
+  --text: #1b293b;
+  --muted: #58677b;
+  --subtle: #8995a5;
+  --accent: #315f91;
+  --border: #e5eaf0;
+
+  --content-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
 
 body {
-  font-family: "Inter", -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
 
-  font-size: 15.5px;
+  font-family: "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
   font-weight: 500;
-  color: #263445;
+  line-height: 1.75;
 
-  /* Avoid unnecessarily thin rendering */
   -webkit-font-smoothing: auto;
 }
 
-/* Main name */
-.hero h1 {
-  font-size: clamp(40px, 5vw, 48px);
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  color: #17283c;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Academic position */
-.hero-position {
-  font-size: 16px;
-  font-weight: 500;
-  color: #526174;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-.hero-position strong {
-  font-weight: 700;
-  color: #263445;
+.container {
+  width: calc(100% - 64px);
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Introduction */
-.hero-description {
-  font-size: 15.5px;
-  font-weight: 500;
-  line-height: 1.85;
-  color: #48576b;
+
+/* ========================================
+   2. NAVIGATION
+======================================== */
+
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid var(--border);
 }
 
-/* Section headings */
-.section-heading h2 {
-  font-size: 25px;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: #1c2b3e;
+.nav {
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
 }
 
-/* About text */
-.about-text {
-  font-size: 15.5px;
-  font-weight: 500;
-  color: #4b596c;
-}
-
-/* Research titles */
-.research-card h3 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #23354b;
-}
-
-.research-card p {
-  font-weight: 500;
-  color: #586579;
-}
-
-/* Publication titles */
-.publication h3 {
-  font-size: 16px;
-  font-weight: 700;
-  color: #23354b;
-}
-
-.publication p {
-  font-weight: 500;
-  color: #586579;
-}
-
-/* Navigation */
 .brand {
+  font-size: 16px;
   font-weight: 800;
-  letter-spacing: 0.015em;
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .nav-links a {
+  font-size: 13px;
   font-weight: 600;
-  color: #526174;
+  color: var(--muted);
+
+  transition: color .2s ease;
 }
 
-/* Tags */
-.tag {
-  font-weight: 600;
+.nav-links a:hover {
+  color: var(--accent);
 }
 
-/* Timeline */
-.timeline-content h3 {
+
+/* ========================================
+   3. HERO
+======================================== */
+
+.hero {
+  padding: 88px 0 76px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+
+  align-items: center;
+  gap: 75px;
+}
+
+.eyebrow {
+  margin-bottom: 19px;
+
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(40px, 5vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+
+  color: #17283c;
+}
+
+.hero-position {
+  margin-top: 13px;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.7;
+
+  color: var(--muted);
+}
+
+.hero-position strong {
+  color: var(--text);
   font-weight: 700;
 }
 
+.hero-description {
+  max-width: 670px;
+  margin-top: 23px;
+
+  color: #4d5d71;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-top: 23px;
+}
+
+.tag {
+  display: inline-block;
+
+  padding: 5px 12px;
+
+  background: #f5f8fc;
+  border: 1px solid #dce5ef;
+  border-radius: 5px;
+
+  color: #3c628b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hero-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  margin-top: 28px;
+}
+
+.hero-links a {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: opacity .2s ease;
+}
+
+.hero-links a:hover {
+  opacity: .65;
+}
+
+
+/* Portrait */
+
+.portrait-wrap {
+  width: 170px;
+  height: 200px;
+
+  justify-self: end;
+
+  overflow: hidden;
+  border-radius: 10px;
+
+  background: #edf1f6;
+  border: 1px solid var(--border);
+}
+
+.portrait {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 38%;
+}
+
+/* Fallback if the photo cannot be loaded */
+
+.portrait-wrap.is-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #edf2f8;
+}
+
+.portrait-wrap.is-placeholder::after {
+  content: "YX";
+
+  color: #315f91;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -.05em;
+}
+
+
+/* ========================================
+   4. GENERAL SECTIONS
+======================================== */
+
+main {
+  padding-top: 5px;
+}
+
+.section {
+  padding: 58px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 27px;
+}
+
+.section-number {
+  color: #8b99aa;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #1b293b;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: 1.3;
+}
+
+.section-intro {
+  max-width: 750px;
+  margin: -9px 0 27px;
+
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* ========================================
+   5. ABOUT
+======================================== */
+
+.about-text {
+  max-width: 900px;
+
+  color: #4c5b6f;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.95;
+}
+
+.about-text p {
+  margin: 0 0 17px;
+}
+
+.about-text strong {
+  color: #26384e;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   6. RESEARCH
+======================================== */
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.research-card {
+  padding: 25px 26px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  transition:
+    border-color .2s ease,
+    transform .2s ease;
+}
+
+.research-card:hover {
+  border-color: #b7c9dd;
+  transform: translateY(-2px);
+}
+
+.card-label {
+  margin-bottom: 12px;
+
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.research-card h3 {
+  margin: 0 0 11px;
+
+  color: #23364d;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+
+.research-card p {
+  margin: 0;
+
+  color: #58677b;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+
+/* ========================================
+   7. PUBLICATIONS
+======================================== */
+
+.publication-list {
+  display: grid;
+}
+
+.publication {
+  padding: 23px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.publication:first-child {
+  padding-top: 0;
+}
+
+.publication:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.publication h3 {
+  margin: 0 0 8px;
+
+  color: #25364a;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.publication p {
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.85;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 11px;
+  padding: 3px 10px;
+
+  border-radius: 4px;
+
+  background: #eef3f8;
+  color: #45698e;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status.published {
+  background: #edf5ef;
+  color: #477454;
+}
+
+
+/* ========================================
+   8. EXPERIENCE & EDUCATION
+======================================== */
+
+.subsection-title {
+  margin: 32px 0 22px;
+
+  color: #30455e;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.subsection-title:first-of-type {
+  margin-top: 0;
+}
+
+.timeline {
+  display: grid;
+  gap: 26px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 26px;
+}
+
+.timeline-date {
+  padding-top: 2px;
+
+  color: #8794a5;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.timeline-content h3 {
+  margin: 0 0 4px;
+
+  color: #25364a;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.timeline-content .institution {
+  margin-bottom: 7px;
+
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+}
+
 .timeline-content p {
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 13px;
   font-weight: 500;
-  color: #586579;
+  line-height: 1.85;
 }
 
-/* Footer */
+
+/* ========================================
+   9. CONTACT
+======================================== */
+
+.contact-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.contact-content p {
+  max-width: 650px;
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.contact-content strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 10px 20px;
+
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: all .2s ease;
+}
+
+.contact-button:hover {
+  background: var(--accent);
+  color: white;
+}
+
+
+/* ========================================
+   10. FOOTER
+======================================== */
+
 footer {
-  font-weight: 500;
+  padding: 30px 0;
+
+  color: #8491a2;
+  font-size: 11px;
+  font-weight: 600;
 }
 
-    
-  </style>
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
 
-  
+
+/* ========================================
+   11. RESPONSIVE
+======================================== */
+
+@media (max-width: 760px) {
+
+  .container {
+    width: calc(100% - 40px);
+  }
+
+  .nav {
+    min-height: 65px;
+    height: auto;
+
+    flex-wrap: wrap;
+    padding: 14px 0;
+    gap: 13px;
+  }
+
+  .nav-links {
+    gap: 17px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 54px 0 48px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .portrait-wrap {
+    grid-row: 1;
+    justify-self: start;
+
+    width: 125px;
+    height: 150px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 43px 0;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .section-heading h2 {
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    transition: none !important;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <div class="nav-wrap">
-    <div class="container nav">
-      <a href="#" class="brand">YIWEI XU</a>
+<!-- =====================================
+     NAVIGATION
+===================================== -->
 
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<header class="nav-wrap">
+  <div class="container nav">
+
+    <a href="#" class="brand">Yiwei Xu</a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+<section class="hero">
+
+  <div class="container hero-inner">
+
+    <div class="hero-main">
+
+      <div class="eyebrow">
+        Astrophysics · Radio Astronomy
+      </div>
+
+      <h1>Yiwei Xu</h1>
+
+      <div class="hero-position">
+        Ph.D. Student in Astrophysics
+      </div>
+
+      <div class="hero-position">
+        <strong>National Astronomical Observatories</strong><br>
+        Chinese Academy of Sciences
+      </div>
+
+      <p class="hero-description">
+        My research focuses on neutral hydrogen (H I) in nearby
+        galaxies, with an emphasis on H I surveys, galaxy evolution,
+        and the environmental processes shaping satellite galaxies.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">Neutral Hydrogen (H I)</span>
+        <span class="tag">Galaxy Evolution</span>
+        <span class="tag">Radio Astronomy</span>
+      </div>
+
+      <div class="hero-links">
+        <a href="mailto:xuyiwei24@mails.ucas.ac.cn">
+          Email ↗
+        </a>
+
+        <a href="https://github.com/xuyw-ast"
+           target="_blank"
+           rel="noopener noreferrer">
+          GitHub ↗
+        </a>
+      </div>
+
     </div>
+
+
+    <!-- Profile Photo -->
+
+    <div class="portrait-wrap">
+
+      <img
+        class="portrait"
+        src="assets/profile.jpg"
+        alt="Yiwei Xu"
+        width="826"
+        height="837"
+        onerror="this.style.display='none'; this.parentElement.classList.add('is-placeholder');"
+      >
+
+    </div>
+
   </div>
 
-  <main>
+</section>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner">
 
-        <div class="hero-main">
-          <div class="eyebrow">
-            Astrophysics · Radio Astronomy
-          </div>
+<!-- =====================================
+     ABOUT
+===================================== -->
 
-          <h1>Yiwei Xu</h1>
+<section class="section" id="about">
 
-          <div class="hero-position">
-            Ph.D. Student in Astrophysics
-          </div>
+  <div class="container">
 
-          <div class="hero-position">
-            <strong>National Astronomical Observatories</strong><br>
-            Chinese Academy of Sciences
-          </div>
-
-          <p class="hero-description">
-            My research focuses on neutral hydrogen (H I) in nearby
-            galaxies, with an emphasis on H I surveys, galaxy evolution,
-            and the environmental processes shaping satellite galaxies.
-          </p>
-
-          <div class="hero-tags">
-            <span class="tag">Neutral Hydrogen (H I)</span>
-            <span class="tag">Galaxy Evolution</span>
-            <span class="tag">Radio Surveys</span>
-          </div>
-
-          <div class="hero-links">
-            <a href="mailto:xuyiwei24@mails.ucas.ac.cn">Email ↗</a>
-            <a href="https://github.com/xuyw-ast"
-               target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          </div>
-        </div>
-
-        <div class="portrait-wrap">
-          <img
-            class="portrait"
-            src="assets/profile.jpg"
-            alt="Yiwei Xu"
-            width="826"
-            height="837"
-          >
-        </div>
-
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section" id="about">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-number">01</span>
-          <h2>About</h2>
-        </div>
-
-        <div class="about-text">
-          <p>
-            I am a Ph.D. student in Astrophysics at the
-            <strong>National Astronomical Observatories,
-            Chinese Academy of Sciences (NAOC)</strong>,
-            advised by Prof. Jie Wang.
-          </p>
-
-          <p>
-            My research explores the role of neutral hydrogen in
-            galaxy formation and evolution. I am particularly
-            interested in how the H I content of galaxies changes
-            across different environments, and how large-scale
-            radio surveys can reveal the distribution and evolution
-            of gas in the nearby Universe.
-          </p>
-
-          <p>
-            My current research involves the FAST–M31 survey,
-            the FEASTS survey, and the FAST Hundred-deg² H I Deep
-            (HD²) Survey. I work with observational data processing,
-            source catalog construction, H I mass functions,
-            and the environmental effects on satellite galaxies.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Research -->
-    <section class="section" id="research">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-number">02</span>
-          <h2>Research</h2>
-        </div>
-
-        <p class="section-intro">
-          Selected research projects in observational radio astronomy
-          and galaxy evolution.
-        </p>
-
-        <div class="research-grid">
-
-          <article class="research-card">
-            <div class="card-label">H I Survey · FAST</div>
-            <h3>FAST–M31</h3>
-            <p>
-              Investigating background H I sources in the M31 halo
-              region using FAST observations. My work includes
-              catalog construction and the measurement of the
-              H I mass function using statistical methods.
-            </p>
-          </article>
-
-          <article class="research-card">
-            <div class="card-label">Galaxy Evolution · FEASTS</div>
-            <h3>FEASTS</h3>
-            <p>
-              Studying the H I properties of satellite galaxies
-              and environmental effects on galaxy evolution,
-              with a particular focus on gas stripping,
-              quenching, and diffuse H I structures.
-            </p>
-          </article>
-
-          <article class="research-card">
-            <div class="card-label">Large-scale Survey · FAST</div>
-            <h3>HD² Survey</h3>
-            <p>
-              Contributing to the FAST Hundred-deg² H I Deep Survey,
-              including survey planning, observing strategies,
-              HiFAST data processing, and source extraction.
-            </p>
-          </article>
-
-          <article class="research-card">
-            <div class="card-label">Research Interests</div>
-            <h3>Radio Astronomy</h3>
-            <p>
-              Broader interests include H I scaling relations,
-              the H I mass function, large-scale structure,
-              radio survey techniques, and the connection
-              between gas content and galaxy evolution.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Publications -->
-    <section class="section" id="publications">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-number">03</span>
-          <h2>Publications & Manuscripts</h2>
-        </div>
-
-        <p class="section-intro">
-          Selected research outputs and ongoing manuscripts.
-        </p>
-
-        <div class="publication-list">
-
-          <article class="publication">
-            <h3>
-              FAST Hundred-deg² H I Deep (HD²) Survey —
-              Pilot Study
-            </h3>
-            <p>
-              A pilot study of the FAST HD² survey.
-              Contributed to survey planning, observations,
-              data processing, and source extraction.
-            </p>
-            <span class="status published">Published</span>
-          </article>
-
-          <article class="publication">
-            <h3>
-              FAST–M31: Background H I Source Catalog
-              and H I Mass Function
-            </h3>
-            <p>
-              First-author research on background H I sources
-              in the M31 halo region and the H I mass function.
-            </p>
-            <span class="status">Manuscript in preparation</span>
-          </article>
-
-          <article class="publication">
-            <h3>
-              FEASTS: H I Properties and Environmental Effects
-              on Satellite Galaxies
-            </h3>
-            <p>
-              Ongoing research on H I deficiency, gas stripping,
-              and environmental processes in satellite galaxies.
-            </p>
-            <span class="status">Ongoing work</span>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="section" id="experience">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-number">04</span>
-          <h2>Education & Experience</h2>
-        </div>
-
-        <div class="timeline">
-
-          <div class="timeline-item">
-            <div class="timeline-date">Sep 2026 – Present</div>
-            <div class="timeline-content">
-              <h3>Ph.D. in Astrophysics</h3>
-              <div class="institution">
-                National Astronomical Observatories, CAS
-              </div>
-              <p>
-                Advisor: Prof. Jie Wang.
-                Research on H I and galaxy evolution.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-date">Sep 2024 – Jun 2026</div>
-            <div class="timeline-content">
-              <h3>Master's Studies in Astrophysics</h3>
-              <div class="institution">
-                National Astronomical Observatories, CAS
-              </div>
-              <p>
-                Transferred to the Ph.D. program in 2026.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-date">2023 – Present</div>
-            <div class="timeline-content">
-              <h3>FAST Hundred-deg² H I Deep (HD²) Survey</h3>
-              <div class="institution">
-                National Astronomical Observatories, CAS
-              </div>
-              <p>
-                Survey planning, observing strategies,
-                H I data processing, and source extraction.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-date">2025 – Present</div>
-            <div class="timeline-content">
-              <h3>FEASTS Survey</h3>
-              <div class="institution">
-                National Astronomical Observatories, CAS
-              </div>
-              <p>
-                H I properties and environmental effects
-                on satellite galaxies.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-date">Sep 2020 – Jun 2024</div>
-            <div class="timeline-content">
-              <h3>B.Sc. (Hons) in Computer Science</h3>
-              <div class="institution">
-                Southwest Jiaotong University –
-                University of Leeds Joint School
-              </div>
-              <p>
-                First-Class Honours.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-number">05</span>
-          <h2>Contact</h2>
-        </div>
-
-        <div class="contact-content">
-          <p>
-            For questions about my research, academic discussions,
-            or potential collaborations, please feel free to get
-            in touch.
-            <br><br>
-            <strong>Email:</strong>
-            xuyw@bao.ac.cn
-          </p>
-
-          <a class="contact-button"
-             href="mailto:xuyiwei24@mails.ucas.ac.cn">
-            Get in touch ↗
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <span>© 2026 Yiwei Xu</span>
-      <span>Astrophysics · Radio Astronomy · NAOC</span>
+    <div class="section-heading">
+      <span class="section-number">01</span>
+      <h2>About</h2>
     </div>
-  </footer>
+
+    <div class="about-text">
+
+      <p>
+        I am a Ph.D. student in Astrophysics at the
+        <strong>National Astronomical Observatories,
+        Chinese Academy of Sciences (NAOC)</strong>,
+        advised by Prof. Jie Wang.
+      </p>
+
+      <p>
+        My research explores the role of neutral hydrogen
+        in galaxy formation and evolution. I am particularly
+        interested in how the H I content of galaxies changes
+        across different environments, and how large-scale
+        radio surveys can reveal the distribution and evolution
+        of gas in the nearby Universe.
+      </p>
+
+      <p>
+        My current research involves the FAST–M31 survey,
+        the FEASTS survey, and the FAST Hundred-deg² H I Deep
+        (HD²) Survey. My work includes observational data
+        processing, source catalog construction, H I mass
+        functions, and the environmental effects on
+        satellite galaxies.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     RESEARCH
+===================================== -->
+
+<section class="section" id="research">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-number">02</span>
+      <h2>Research</h2>
+    </div>
+
+    <p class="section-intro">
+      Selected research projects in observational radio
+      astronomy and galaxy evolution.
+    </p>
+
+    <div class="research-grid">
+
+
+      <article class="research-card">
+
+        <div class="card-label">
+          H I Survey · FAST
+        </div>
+
+        <h3>FAST–M31</h3>
+
+        <p>
+          Investigating background H I sources in the M31
+          halo region using FAST observations. My work
+          includes catalog construction and the measurement
+          of the H I mass function using statistical methods.
+        </p>
+
+      </article>
+
+
+      <article class="research-card">
+
+        <div class="card-label">
+          Galaxy Evolution · FEASTS
+        </div>
+
+        <h3>FEASTS</h3>
+
+        <p>
+          Studying the H I properties of satellite galaxies
+          and environmental effects on galaxy evolution,
+          with a particular focus on gas stripping,
+          quenching, and diffuse H I structures.
+        </p>
+
+      </article>
+
+
+      <article class="research-card">
+
+        <div class="card-label">
+          Large-scale Survey · FAST
+        </div>
+
+        <h3>HD² Survey</h3>
+
+        <p>
+          Contributing to the FAST Hundred-deg² H I Deep
+          Survey, including survey planning, observing
+          strategies, HiFAST data processing, and
+          source extraction.
+        </p>
+
+      </article>
+
+
+      <article class="research-card">
+
+        <div class="card-label">
+          Research Interests
+        </div>
+
+        <h3>Radio Astronomy</h3>
+
+        <p>
+          Broader interests include H I scaling relations,
+          the H I mass function, large-scale structure,
+          radio survey techniques, and the connection
+          between gas content and galaxy evolution.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     PUBLICATIONS
+===================================== -->
+
+<section class="section" id="publications">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-number">03</span>
+      <h2>Publications & Manuscripts</h2>
+    </div>
+
+    <p class="section-intro">
+      Selected research outputs and ongoing manuscripts.
+    </p>
+
+    <div class="publication-list">
+
+
+      <article class="publication">
+
+        <h3>
+          FAST Hundred-deg² H I Deep (HD²) Survey —
+          Pilot Study
+        </h3>
+
+        <p>
+          A pilot study of the FAST HD² survey.
+          Contributed to survey planning, observations,
+          data processing, and source extraction.
+        </p>
+
+        <span class="status published">
+          Published
+        </span>
+
+      </article>
+
+
+      <article class="publication">
+
+        <h3>
+          FAST–M31: Background H I Source Catalog
+          and H I Mass Function
+        </h3>
+
+        <p>
+          First-author research on background H I sources
+          in the M31 halo region and the H I mass function.
+        </p>
+
+        <span class="status">
+          Manuscript in preparation
+        </span>
+
+      </article>
+
+
+      <article class="publication">
+
+        <h3>
+          FEASTS: H I Properties and Environmental Effects
+          on Satellite Galaxies
+        </h3>
+
+        <p>
+          Ongoing research on H I deficiency, gas stripping,
+          and environmental processes in satellite galaxies.
+        </p>
+
+        <span class="status">
+          Ongoing work
+        </span>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     EXPERIENCE
+===================================== -->
+
+<section class="section" id="experience">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-number">04</span>
+      <h2>Education & Experience</h2>
+    </div>
+
+
+    <h3 class="subsection-title">
+      Education
+    </h3>
+
+    <div class="timeline">
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-date">
+          Sep 2026 – Present
+        </div>
+
+        <div class="timeline-content">
+
+          <h3>Ph.D. in Astrophysics</h3>
+
+          <div class="institution">
+            National Astronomical Observatories, CAS
+          </div>
+
+          <p>
+            Advisor: Prof. Jie Wang.
+            Research on H I and galaxy evolution.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-date">
+          Sep 2024 – Jun 2026
+        </div>
+
+        <div class="timeline-content">
+
+          <h3>Master's Studies in Astrophysics</h3>
+
+          <div class="institution">
+            National Astronomical Observatories, CAS
+          </div>
+
+          <p>
+            Transferred to the Ph.D. program in 2026.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-date">
+          Sep 2020 – Jun 2024
+        </div>
+
+        <div class="timeline-content">
+
+          <h3>B.Sc. (Hons) in Computer Science</h3>
+
+          <div class="institution">
+            Southwest Jiaotong University –
+            University of Leeds Joint School
+          </div>
+
+          <p>
+            First-Class Honours.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <h3 class="subsection-title">
+      Research Experience
+    </h3>
+
+    <div class="timeline">
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-date">
+          2023 – Present
+        </div>
+
+        <div class="timeline-content">
+
+          <h3>FAST Hundred-deg² H I Deep (HD²) Survey</h3>
+
+          <div class="institution">
+            National Astronomical Observatories, CAS
+          </div>
+
+          <p>
+            Survey planning, observing strategies,
+            H I data processing, and source extraction.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-date">
+          2024 – 2026
+        </div>
+
+        <div class="timeline-content">
+
+          <h3>FAST–M31 Survey</h3>
+
+          <div class="institution">
+            National Astronomical Observatories, CAS
+          </div>
+
+          <p>
+            Background H I source catalog construction
+            and H I mass function analysis.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-date">
+          2025 – Present
+        </div>
+
+        <div class="timeline-content">
+
+          <h3>FEASTS Survey</h3>
+
+          <div class="institution">
+            National Astronomical Observatories, CAS
+          </div>
+
+          <p>
+            H I properties and environmental effects
+            on satellite galaxies.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     CONTACT
+===================================== -->
+
+<section class="section" id="contact">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-number">05</span>
+      <h2>Contact</h2>
+    </div>
+
+    <div class="contact-content">
+
+      <p>
+        For questions about my research, academic discussions,
+        or potential collaborations, please feel free to get
+        in touch.
+
+        <br><br>
+
+        <strong>Email:</strong>
+        xuyiwei24@mails.ucas.ac.cn
+      </p>
+
+      <a
+        class="contact-button"
+        href="mailto:xuyiwei24@mails.ucas.ac.cn"
+      >
+        Get in touch ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <span>© 2026 Yiwei Xu</span>
+
+    <span>
+      Astrophysics · Radio Astronomy · NAOC
+    </span>
+
+  </div>
+
+</footer>
 
 </body>
 </html>
