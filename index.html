@@ -9,6 +9,12 @@
   <meta name="description" content="Yiwei Xu, Ph.D. student in Astrophysics at the National Astronomical Observatories, Chinese Academy of Sciences. Research on H I, galaxy evolution, and radio surveys.">
 
   <style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
     :root {
       --bg: #ffffff;
       --surface: #f7f8fa;
@@ -522,7 +528,127 @@
         transition-duration: 0.01ms !important;
       }
     }
+
+    
+/* =================================
+   Typography refinement
+   Stronger, clearer academic style
+   ================================= */
+
+body {
+  font-family: "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #263445;
+
+  /* Avoid unnecessarily thin rendering */
+  -webkit-font-smoothing: auto;
+}
+
+/* Main name */
+.hero h1 {
+  font-size: clamp(40px, 5vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: #17283c;
+}
+
+/* Academic position */
+.hero-position {
+  font-size: 16px;
+  font-weight: 500;
+  color: #526174;
+}
+
+.hero-position strong {
+  font-weight: 700;
+  color: #263445;
+}
+
+/* Introduction */
+.hero-description {
+  font-size: 15.5px;
+  font-weight: 500;
+  line-height: 1.85;
+  color: #48576b;
+}
+
+/* Section headings */
+.section-heading h2 {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #1c2b3e;
+}
+
+/* About text */
+.about-text {
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #4b596c;
+}
+
+/* Research titles */
+.research-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #23354b;
+}
+
+.research-card p {
+  font-weight: 500;
+  color: #586579;
+}
+
+/* Publication titles */
+.publication h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #23354b;
+}
+
+.publication p {
+  font-weight: 500;
+  color: #586579;
+}
+
+/* Navigation */
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.015em;
+}
+
+.nav-links a {
+  font-weight: 600;
+  color: #526174;
+}
+
+/* Tags */
+.tag {
+  font-weight: 600;
+}
+
+/* Timeline */
+.timeline-content h3 {
+  font-weight: 700;
+}
+
+.timeline-content p {
+  font-weight: 500;
+  color: #586579;
+}
+
+/* Footer */
+footer {
+  font-weight: 500;
+}
+
+    
   </style>
+
+  
 </head>
 
 <body>
